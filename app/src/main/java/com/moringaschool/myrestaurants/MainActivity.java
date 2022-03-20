@@ -2,6 +2,7 @@ package com.moringaschool.myrestaurants;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,10 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                //Add Toast
-                //Simple pop-up message when button is clicked
-                //toast(context,message,duration).show();
-                Toast.makeText(MainActivity.this,"Hello There",Toast.LENGTH_LONG).show();
+                //Toast
+                // Simple pop-up message when button is clicked
+                // toast(context,message,duration).show();
+                // Toast.makeText(MainActivity.this,"Hello There",Toast.LENGTH_LONG).show();
+
+                //Intent - Provides RunTime Binding between separate components ex: different Activities
+                //params :: packageContext
+                Intent intent = new Intent(MainActivity.this,RestaurantsActivity.class);
+                startActivity(intent);
             }
         });
     }
