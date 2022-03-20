@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Button findRestaurantsButton = (Button) findViewById(R.id.findRestaurantsButton);
 
         //Add Click Listener to button
-        //Set OnClick takes new onClickListener
+        //Set OnClick takes new onClickListener as Arg
         findRestaurantsButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
                 //Save user input and convert it from editable to a String
                 String location = locationEditText.getText().toString();
-                Log.d(TAG, location);
+                Log.d(TAG, location);//d Send debug log message
 
                 //Intent - Provides RunTime Binding between separate components ex: different Activities
-                //params :: packageContext
-                Intent intent = new Intent(MainActivity.this,RestaurantsActivity.class);
+                Intent intent = new Intent(MainActivity.this,RestaurantsActivity.class);//params :: packageContext
+                intent.putExtra("location",location);//putExtra()-> Pass Data Between Activities
                 startActivity(intent);
                 Toast.makeText(MainActivity.this,location,Toast.LENGTH_LONG).show();
             }

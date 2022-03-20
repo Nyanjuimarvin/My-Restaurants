@@ -12,6 +12,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/myrestaurant" />
 
@@ -29,13 +31,11 @@
     <EditText
         android:id="@+id/locationEditText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="331dp"
-        android:background="@color/colorTextIcons"
+        android:layout_height="48dp"
         android:layout_above="@+id/findRestaurantsButton"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="244dp"
+        android:background="@color/colorTextIcons"
         android:ems="10"
         android:hint="Enter Zip Code"
         android:inputType="text"
