@@ -16,7 +16,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         TextView textview = (TextView) findViewById(R.id.locationTextView);
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        textview.setText(String.format("Here Are Restaurants Near:  %s ",location));
+        textview.setText(String.format("Here Are Restaurants Near: %s",location));
 
     }
 }
