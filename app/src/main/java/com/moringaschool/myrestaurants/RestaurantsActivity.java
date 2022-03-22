@@ -11,8 +11,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.moringaschool.myrestaurants.databinding.ActivityRestaurantsBinding;
+
 public class RestaurantsActivity extends AppCompatActivity {
 
+    ActivityRestaurantsBinding restaurantsBinding;
     //Hard ListView Array
     private final String[] restaurants = new String[] {"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
@@ -23,7 +26,9 @@ public class RestaurantsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_restaurants);
+        restaurantsBinding = ActivityRestaurantsBinding.inflate(getLayoutInflater());
+        View view = restaurantsBinding.getRoot();
+        setContentView(view);
 
         TextView textview = (TextView) findViewById(R.id.locationTextView);
         ListView listView = (ListView) findViewById(R.id.listView);
